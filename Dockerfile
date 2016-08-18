@@ -15,10 +15,10 @@ ENV PATH $OPT/bin:$PATH
 ENV PERL5LIB $OPT/lib/perl5
 
 RUN apt-get -yq update && \
-    apt-get -yq install libreadline6-dev build-essential autoconf software-properties-common python-software-properties \
+    apt-get -yq install libmysqlclient-dev libreadline6-dev build-essential autoconf software-properties-common python-software-properties \
       curl libcurl4-openssl-dev nettle-dev zlib1g-dev libncurses5-dev \
       libexpat1-dev python unzip libboost-dev libboost-iostreams-dev \
-      libpstreams-dev libglib2.0-dev gfortran libcairo2-dev libmariadbclient-dev \
+      libpstreams-dev libglib2.0-dev gfortran libcairo2-dev \
       git bsdtar libwww-perl openjdk-7-jdk time wget && \
     apt-get clean
 
