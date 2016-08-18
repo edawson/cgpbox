@@ -27,7 +27,7 @@ RUN mkdir -p /tmp/downloads $OPT/bin $OPT/etc $OPT/lib $OPT/share $OPT/site /tmp
 WORKDIR /tmp/downloads
 
 # PCAP-core
-RUN curl -L -o master.zip --retry 10 https://github.com/ICGC-TCGA-PanCancer/PCAP-core/archive/dev.zip && \
+RUN curl -L -o master.zip --retry 10 https://github.com/ICGC-TCGA-PanCancer/PCAP-core/archive/v2.5.0.zip && \
     mkdir /tmp/downloads/distro && \
     bsdtar -C /tmp/downloads/distro --strip-components 1 -xf master.zip && \
     cd /tmp/downloads/distro && \
