@@ -30,13 +30,6 @@ WORKDIR /tmp/downloads
 RUN git clone --recursive https://github.com/ICGC-TCGA-PanCancer/PCAP-core.git pcap && \
     cd pcap && ./setup.sh $OPT
 
-#curl -L -o master.zip --retry 10 https://github.com/ICGC-TCGA-PanCancer/PCAP-core/archive/master.zip && \
-#    mkdir /tmp/downloads/distro && \
-#    bsdtar -C /tmp/downloads/distro --strip-components 1 -xf master.zip && \
-#    cd /tmp/downloads/distro && \
-#    ./setup.sh $OPT && \
-#    cd /tmp/downloads && \
-#    rm -rf master.zip /tmp/downloads/distro /tmp/hts_cache
 
 # alleleCount
 RUN curl -L -o master.zip --retry 10 https://github.com/cancerit/alleleCount/archive/master.zip && \
